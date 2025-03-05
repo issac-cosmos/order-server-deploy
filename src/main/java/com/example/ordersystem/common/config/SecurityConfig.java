@@ -40,7 +40,7 @@ public class SecurityConfig {
                 .addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class)
 
 //                .authenticated() : 모든 요청에 대해서 Authentication객체가 생성되기를 요구
-                .authorizeHttpRequests(a->a.requestMatchers("/member/create","/member/doLogin"
+                .authorizeHttpRequests(a->a.requestMatchers("/member/create","/member/Login"
                         ,"member/refresh-token","/product/list").permitAll().anyRequest().authenticated())
                 .build();
     }
