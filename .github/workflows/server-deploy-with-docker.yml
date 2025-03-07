@@ -28,7 +28,7 @@ jobs:
         host: ${{ secrets.EC2_HOST }}
         username: ubuntu
         key: ${{ secrets.EC2_PEMKEY }}
-        script: 
+        script: |
             if ! type docker > /dev/null ; then
                 export DEBIAN_FRONTEND=noninteractive
                 curl -fsSL https://get.docker.com | bash
