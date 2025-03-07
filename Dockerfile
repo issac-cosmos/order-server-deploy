@@ -9,6 +9,7 @@ COPY build.gradle .
 COPY settings.gradle .
 COPY gradlew .
 # 빌드 
+RUN chmod 777 gradlew
 RUN ./gradlew bootJar
 
 # 두번째 스테이지 
